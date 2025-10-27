@@ -1,0 +1,367 @@
+/* === ESTILOS GENERALES PARA PÁGINAS DE PROYECTOS === */
+/* HEADER */
+header {
+	padding: 10px 40px 0;
+	position: relative;
+}
+
+header nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+	padding: 0;
+}
+
+header nav li {
+	display: inline-block;
+}
+
+header nav a {
+	text-decoration: none;
+	color: #E6D1D0;
+	font-size: 14px;
+	letter-spacing: 2px;
+}
+
+header nav a.active {
+	font-weight: bold;
+}
+
+header .line {
+	position: absolute;
+	top: 50px;
+	left: 0;
+	width: 100vw;
+	height: 1px;
+	background-color: #E6D1D0;
+}
+
+body.project-page {
+	background-color: #2A0913;
+	color: #E6D1D0;
+	font-family: 'League Spartan', sans-serif;
+	margin: 0;
+}
+
+/* HEADER DEL PROYECTO (TÍTULO Y SUBTÍTULO) */
+.project-header {
+	text-align: center;
+	margin-bottom: 0px;
+	margin-top: 60px;
+}
+
+.project-header h1 {
+	font-size: 48px;
+	margin: 0;
+	font-weight: normal;
+	letter-spacing: 1px;
+}
+
+header nav a.active {
+  font-weight: bold;
+}
+
+.project-header p {
+	font-size: 18px;
+	margin-top: 10px;
+	color: #E6D1D0;
+  letter-spacing: 1px;
+}
+
+/* GRID DE VIDEOS - PROYECTOS CON UN SOLO VIDEO*/
+
+body.project-page .video-container iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: none;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  max-width: 1000px;
+}
+
+/* GRID DE IMÁGENES — Masonry layout para proyectos con varias imágenes */
+body.project-page .image-grid {
+  column-count: 4;          
+  column-gap: 10px;
+  padding: 10px;
+}
+
+body.project-page .image-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+  break-inside: avoid;    
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  body.project-page .image-grid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  body.project-page .image-grid {
+    column-count: 1;
+  }
+}
+
+/* === VARIACIONES SEGÚN PROYECTO === */
+
+/* === ART DIRECTION === */
+
+/* SKIP → 2 columnas */
+/* Contenedor general de la grilla */
+body.skip .video-grid-vertical {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 0px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 50px auto 0;
+}
+
+/* Cada video vertical */
+body.skip .video-grid-vertical .video {
+  width: 270px;        /* ancho deseado */
+  height: 500px;       /* alto deseado */
+  overflow: hidden;    /* recorta lo que sobresale */
+  position: relative;
+}
+
+/* iframe dentro del contenedor */
+body.skip .video-grid-vertical .video iframe {
+  position: absolute;
+  top: 0;
+  left: -50px;         /* ajusta para centrar la parte que quieras mostrar */
+  width: 400px;        /* escalado para cubrir el contenedor */
+  height: 500px;
+}
+
+
+/*NESPRESSO LISBOA  → video y grilla de imágenes  */
+body.project-page.nespresso .grid-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 10px;
+  padding: 0px 50px;
+  align-items: center;
+}
+
+body.project-page.nespresso .image-left img {
+  width: 100%;
+  height: 370px;
+  object-fit: cover;
+  display: block;
+}
+
+body.project-page.nespresso .video-container {
+  width: 100%;
+}
+
+body.project-page.nespresso .video-container iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: none;
+  display: block;
+}
+
+body.project-page.nespresso .grid-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 10px 50px 50px 50px;
+}
+
+body.project-page.nespresso .grid-bottom img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+/* === NESPRESSO COFFEE AMBASSADORS === */
+body.coffee-ambassadors .video-container {
+  display: grid;                 /* layout en dos columnas */
+  grid-template-columns: 1fr 1fr;/* dos columnas iguales */
+  gap: 20px;                     /* separación entre videos */
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto 60px;           /* centrado y separación abajo */
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+body.coffee-ambassadors .video-container iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  border: none;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  body.coffee-ambassadors .video-container {
+    grid-template-columns: 1fr; /* una columna */
+  }
+}
+
+/* === TNT SPORTS === */
+body.tnt-sports .video-grid {
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 10px; /* antes 20px */
+  max-width: 900px; /* limita el ancho total */
+  margin: 0 auto; /* centra el grid */
+  padding: 0 10px; /* margen interno más chico */
+}
+
+body.tnt-sports .video-grid .video:nth-child(2),
+body.tnt-sports .video-grid .video:nth-child(3) {
+  grid-column: span 1;
+}
+
+body.tnt-sports .video-grid iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  transform-origin: center;
+}
+
+/* Para los dos videos de abajo */
+@media (min-width: 900px) {
+	body.tnt-sports .video-grid {
+		grid-template-columns: 1fr 1fr; /* fila de 2 columnas */
+	}
+	body.tnt-sports .video-grid .video:first-child {
+		grid-column: span 2; /* primer video ocupa toda la fila */
+	}
+}
+
+/* === MASTER ORIGINS === */
+body.master-origins .image-grid {
+  column-count: 3; /* número de columnas */
+  column-gap: 10px; /* espacio entre ellas */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px;
+  margin-top: 10px;
+}
+
+body.master-origins .image-grid img {
+  width: 100%;
+  margin-bottom: 20px; /* espacio entre filas */
+  display: block;
+  object-fit: cover;
+}
+
+/* SLICE BABY GOLF → 2 columnas */
+body.slice-baby-golf .video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* dos columnas */
+  gap: 10px; 
+  max-width: 1200px;
+  margin: 0 auto 60px; /* centrado y separación inferior */
+  padding: 0 40px; /* espacio lateral */
+  box-sizing: border-box;
+}
+
+body.slice-baby-golf .video-grid iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  display: block;
+}
+
+/* MINGO → 2 columnas de imágenes */
+body.mingo .image-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+body.mingo .image-grid .image img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+@media (max-width: 900px) {
+	.epa .image-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* MILKA HELADOS → grid de imagenes */
+.milka-helados .image-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px;
+	padding: 40px 0;
+}
+
+.milka-helados .image-grid img {
+	width: 100%;
+	height: auto;
+	display: block;
+	object-fit: cover;
+}
+
+@media (max-width: 900px) {
+	.milka-helados .image-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* === STYLING === */
+
+/* ==== TROPILLA DE INVIERNO ==== */
+.tropilla-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+  max-width: 1200px; /* limita el ancho máximo */
+  margin: 20px auto; /* espacio superior/inferior y centrado horizontal */
+  padding: 0 20px; /* espacio extra a los lados */
+  box-sizing: border-box;
+}
+
+.tropilla-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body.tropilla .tropilla-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  body.tropilla .tropilla-grid {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+}
+
+/* Ajustes responsivos */
+@media (max-width: 900px) {
+  body.skip .video-grid,
+  body.heridas .video-grid,
+  body.barista .video-grid {
+    grid-template-columns: 1fr; /* En pantallas chicas, una sola columna */
+  }
+
+  .project-header h1 {
+    font-size: 36px;
+  }
+}
+
+
