@@ -1,15 +1,15 @@
 /* === CONTACT PAGE === */
 body.contact {
-  background-color: #670627; /* tu color de fondo */
+  background-color: #670627;
   color: #E6D1D0;
   font-family: 'League Spartan', sans-serif;
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  display: block; /* ✅ importante: que el header no se vea afectado */
+  display: block;
 }
 
-/* HEADER (igual que el resto del sitio) */
+/* HEADER */
 header {
   position: relative;
   padding: 24px 40px 10px;
@@ -54,7 +54,7 @@ header .line {
   align-items: flex-start;
   gap: 200px;
   max-width: 1400px;
-  margin: 120px auto 0 auto; /* ✅ deja espacio debajo del header */
+  margin: 120px auto 0 auto;
   padding: 0 80px;
   box-sizing: border-box;
 }

@@ -136,7 +136,7 @@ body.project-page .image-grid img {
   break-inside: avoid;    
 }
 
-/* Responsive */
+/* Mobile */
 @media (max-width: 1024px) {
   body.project-page .image-grid {
     column-count: 2;
@@ -154,6 +154,7 @@ body.project-page .image-grid img {
 /* === ART DIRECTION === */
 
 /* SKIP */
+
 body.skip .video-grid-vertical {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -181,7 +182,8 @@ body.skip .video-grid-vertical .video iframe {
 }
 
 @media (max-width: 768px) {
-  body.skip .project-header h1 {
+
+  body.skip .project-header h1 
     font-size: 22px;
     line-height: 1.2;
     margin-left: 20px;
@@ -193,8 +195,8 @@ body.skip .video-grid-vertical .video iframe {
   }
   
   body.skip .video-grid-vertical {
-    grid-template-columns: 1fr; /* una sola columna */
-    gap: 20px; /* más aire entre videos */
+    grid-template-columns: 1fr;
+    gap: 20px;
     justify-items: center;
     margin: 20px auto;
     max-width: 100%;
@@ -203,15 +205,15 @@ body.skip .video-grid-vertical .video iframe {
 
   body.skip .video-grid-vertical .video {
     width: 100%;
-    max-width: 360px; /* ancho máximo cómodo para vertical */
-    height: 640px; /* alto más grande tipo pantalla de teléfono */
+    max-width: 360px;
+    height: 640px;
   }
 
   body.skip .video-grid-vertical .video iframe {
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translateX(-50%); /* centra el video horizontalmente */
+    transform: translateX(-50%);
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -258,11 +260,11 @@ body.project-page.nespresso .grid-bottom img {
   display: block;
 }
 @media (max-width: 768px) {
-  /* Grilla superior: video primero, imagen después */
+
   body.project-page.nespresso .grid-top {
     display: flex;
     flex-direction: column-reverse;
-    gap: 10px; /* deja solo 10px entre el video y la imagen */
+    gap: 10px;
     padding: 0;
     margin: 0;
   }
@@ -292,7 +294,6 @@ body.project-page.nespresso .grid-bottom img {
     padding: 0;
   }
 
-  /* Grilla inferior: imágenes una debajo de la otra */
   body.project-page.nespresso .grid-bottom {
     display: flex;
     flex-direction: column;
@@ -308,12 +309,12 @@ body.project-page.nespresso .grid-bottom img {
 }
 /* === NESPRESSO COFFEE AMBASSADORS === */
 body.coffee-ambassadors .video-container {
-  display: grid;                 /* layout en dos columnas */
-  grid-template-columns: 1fr 1fr;/* dos columnas iguales */
-  gap: 20px;                     /* separación entre videos */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
   width: 100%;
   max-width: 1500px;
-  margin: 0 auto 60px;           /* centrado y separación abajo */
+  margin: 0 auto 60px;
   padding: 0 20px;
   box-sizing: border-box;
 }
@@ -328,7 +329,7 @@ body.coffee-ambassadors .video-container iframe {
 
 @media (max-width: 900px) {
   body.coffee-ambassadors .video-container {
-    grid-template-columns: 1fr; /* una columna */
+    grid-template-columns: 1fr;
   }
 }
 
@@ -336,10 +337,10 @@ body.coffee-ambassadors .video-container iframe {
 body.tnt-sports .video-grid {
   display: grid;
   grid-template-columns: 1fr; 
-  gap: 10px; /* antes 20px */
-  max-width: 900px; /* limita el ancho total */
-  margin: 0 auto; /* centra el grid */
-  padding: 0 10px; /* margen interno más chico */
+  gap: 10px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 body.tnt-sports .video-grid .video:nth-child(2),
@@ -354,20 +355,19 @@ body.tnt-sports .video-grid iframe {
   transform-origin: center;
 }
 
-/* Para los dos videos de abajo */
 @media (min-width: 900px) {
 	body.tnt-sports .video-grid {
-		grid-template-columns: 1fr 1fr; /* fila de 2 columnas */
+		grid-template-columns: 1fr 1fr;
 	}
 	body.tnt-sports .video-grid .video:first-child {
-		grid-column: span 2; /* primer video ocupa toda la fila */
+		grid-column: span 2;
 	}
 }
 
 /* === MASTER ORIGINS === */
 body.master-origins .image-grid {
-  column-count: 3; /* número de columnas */
-  column-gap: 10px; /* espacio entre ellas */
+  column-count: 3;
+  column-gap: 10px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 60px;
@@ -376,7 +376,7 @@ body.master-origins .image-grid {
 
 body.master-origins .image-grid img {
   width: 100%;
-  margin-bottom: 20px; /* espacio entre filas */
+  margin-bottom: 20px;
   display: block;
   object-fit: cover;
 }
@@ -387,7 +387,7 @@ body.master-origins .image-grid img {
   }
 
   body.master-origins .image-grid {
-    column-count: 1; /* solo una columna */
+    column-count: 1;
     column-gap: 0;
     gap: 10px;
     padding: 0;
@@ -402,11 +402,11 @@ body.master-origins .image-grid img {
 /* SLICE BABY GOLF → 2 columnas */
 body.slice-baby-golf .video-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* dos columnas */
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px; 
   max-width: 1200px;
-  margin: 0 auto 60px; /* centrado y separación inferior */
-  padding: 0 40px; /* espacio lateral */
+  margin: 0 auto 60px;
+  padding: 0 40px;
   box-sizing: border-box;
 }
 
@@ -418,7 +418,7 @@ body.slice-baby-golf .video-grid iframe {
 }
 @media (max-width: 768px) {
   body.slice-baby-golf .video-grid {
-    grid-template-columns: 1fr; /* una sola columna */
+    grid-template-columns: 1fr;
     gap: 10px;
     padding: 0;
     margin: 10px 0;
@@ -443,8 +443,8 @@ body.mingo .image-grid .image img {
 }
 @media (max-width: 768px) {
   body.mingo .image-grid {
-    grid-template-columns: 1fr; /* una sola columna */
-    gap: 10px; /* espacio entre imágenes */
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   body.mingo .image-grid .image img {
@@ -481,9 +481,9 @@ body.mingo .image-grid .image img {
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   width: 100%;
-  max-width: 1200px; /* limita el ancho máximo */
-  margin: 20px auto; /* espacio superior/inferior y centrado horizontal */
-  padding: 0 20px; /* espacio extra a los lados */
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
   box-sizing: border-box;
 }
 
@@ -494,7 +494,7 @@ body.mingo .image-grid .image img {
   display: block;
 }
 
-/* Responsive */
+/* Mobile */
 @media (max-width: 768px) {
   body.tropilla .tropilla-grid {
     grid-template-columns: repeat(2, 1fr);

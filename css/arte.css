@@ -1,6 +1,6 @@
 body.art-direction {
   background-color: #670627;
-  font-family: 'League Spartan', sans-serif; /* Toda la página usa esta fuente */
+  font-family: 'League Spartan', sans-serif;
   color: #E6D1D0;
   margin: 0;
   padding: 0;
@@ -17,7 +17,7 @@ body.art-direction {
   font-weight: 700;
 }
 
-/* HEADER igual que en la home */
+/* HEADER  */
 header {
   padding: 24px 40px 10px;
 }
@@ -94,7 +94,7 @@ header .line {
   display: block;
 }
 
-/* Overlay negro con transparencia al pasar el cursor */
+/* Overlay */
 .art-image {
   position: relative;
   overflow: hidden;
@@ -107,7 +107,6 @@ header .line {
   display: block;
 }
 
-/* Overlay con texto */
 .art-image .overlay {
   position: absolute;
   top: 0;
@@ -140,7 +139,7 @@ header .line {
 
   .art-item .art-image {
     height: auto;
-    aspect-ratio: 4 / 3; /* mantiene proporción sin deformar */
+    aspect-ratio: 4 / 3;
   }
 
   .art-image .overlay {

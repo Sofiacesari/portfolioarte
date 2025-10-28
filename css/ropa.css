@@ -7,7 +7,7 @@ body.styling {
   padding: 0;
 }
 
-/* HEADER igual que en la home */
+/* HEADER  */
 header {
   padding: 24px 40px 10px;
 }
@@ -66,7 +66,7 @@ header .line {
 
 .styling-image {
   width: 100%;
-  position: relative; /* clave para overlay */
+  position: relative;
   overflow: hidden;
 }
 
@@ -89,7 +89,7 @@ header .line {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* negro al 40% */
+  background: rgba(0, 0, 0, 0.4);
   color: #E6D1D0;
   text-decoration: none;
   display: flex;
@@ -108,7 +108,7 @@ header .line {
 /* TEXTO DE LA OVERLAY */
 .styling-image .overlay p {
   font-family: 'League Spartan', sans-serif;
-  font-weight: 400; /* texto normal */
+  font-weight: 400;
   font-size: 18px;
   margin: 0;
   letter-spacing: 1px;
@@ -116,29 +116,10 @@ header .line {
 
 .styling-image .overlay strong,
 .styling-image .overlay b {
-  font-weight: 700; /* solo la marca en negrita */
+  font-weight: 700;
 }
 
-/* ====== RESPONSIVE STYLING PAGE ====== */
-
-/* Tablet */
-@media (max-width: 1024px) {
-  .styling-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-    padding: 0 20px;
-    margin-top: 0;
-  }
-
-  .styling-image .overlay p {
-    font-size: 16px;
-    padding: 6px;
-  }
-
-  header nav ul {
-    gap: 10px;
-  }
-}
+/* RESPONSIVE */
 
 /* Mobile */
 @media (max-width: 700px) {
