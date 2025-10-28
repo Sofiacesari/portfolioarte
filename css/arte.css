@@ -79,11 +79,10 @@ header .line {
   text-align: left;
 }
 
-
 /* ==== IMAGEN ==== */
 .art-item .art-image {
   width: 100%;
-  height: 300px; /* 🔹 podés ajustar esta altura */
+  height: 300px;
   overflow: hidden;
   position: relative;
 }
@@ -97,79 +96,38 @@ header .line {
 
 /* Overlay negro con transparencia al pasar el cursor */
 .art-image {
-	position: relative;
-	overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .art-image img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-/* Overlay con texto, inicialmente invisible */
+/* Overlay con texto */
 .art-image .overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0,0,0,0.4); /* negro 40% de opacidad */
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: #fff;
-	font-size: 20px;
-	text-align: center;
-	opacity: 0;
-	transition: opacity 0.3s ease;
-	pointer-events: none; /* evita que el overlay bloquee el hover */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
-/* Mostrar overlay al pasar el cursor */
 .art-image:hover .overlay {
-	opacity: 1;
-}
-
-/* ====== RESPONSIVE ART DIRECTION ====== */
-
-/* Tablet */
-@media (max-width: 1024px) {
-  .art-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-    padding: 0 20px;
-  }
-
-  .art-item .art-image {
-    height: 250px;
-  }
-
-  .art-image .overlay {
-    font-size: 16px;
-    background-color: rgba(0, 0, 0, 0.35);
-  }
-}
-
-/* ====== RESPONSIVE ART DIRECTION ====== */
-
-/* Tablet */
-@media (max-width: 1024px) {
-  .art-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-    padding: 0 20px;
-  }
-
-  .art-item .art-image {
-    height: 250px;
-  }
-
-  .art-image .overlay {
-    font-size: 16px;
-    background-color: rgba(0, 0, 0, 0.35);
-  }
+  opacity: 1;
 }
 
 /* Mobile */
