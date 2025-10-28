@@ -153,12 +153,11 @@ body.project-page .image-grid img {
 
 /* === ART DIRECTION === */
 
-/* SKIP → 2 columnas */
-/* Contenedor general de la grilla */
+/* SKIP */
 body.skip .video-grid-vertical {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); 
-  gap: 0px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
   justify-content: center;
   max-width: 1200px;
   margin: 50px auto 0;
@@ -166,9 +165,9 @@ body.skip .video-grid-vertical {
 
 /* Cada video vertical */
 body.skip .video-grid-vertical .video {
-  width: 270px;        /* ancho deseado */
-  height: 500px;       /* alto deseado */
-  overflow: hidden;    /* recorta lo que sobresale */
+  width: 270px;
+  height: 500px;
+  overflow: hidden;
   position: relative;
 }
 
@@ -176,12 +175,12 @@ body.skip .video-grid-vertical .video {
 body.skip .video-grid-vertical .video iframe {
   position: absolute;
   top: 0;
-  left: -50px;         /* ajusta para centrar la parte que quieras mostrar */
-  width: 400px;        /* escalado para cubrir el contenedor */
+  left: -50px;
+  width: 400px;
   height: 500px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   body.skip .project-header h1 {
     font-size: 22px;
     line-height: 1.2;
@@ -192,7 +191,7 @@ body.skip .video-grid-vertical .video iframe {
   body.skip .project-header h1 strong {
     font-size: 30px;
   }
-}
+  
   body.skip .video-grid-vertical {
     grid-template-columns: 1fr; /* una sola columna */
     gap: 20px; /* más aire entre videos */
