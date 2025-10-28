@@ -152,21 +152,43 @@ header .line {
   }
 }
 
-/* Mobile */
+/* ====== RESPONSIVE ART DIRECTION ====== */
 
+/* Tablet */
+@media (max-width: 1024px) {
+  .art-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 0 20px;
+  }
+
+  .art-item .art-image {
+    height: 250px;
+  }
+
+  .art-image .overlay {
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.35);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
   .art-grid {
     grid-template-columns: 1fr;
     gap: 10px;
-    padding: 0 0px;
+    padding: 0;
   }
 
   .art-item .art-image {
     height: auto;
-    aspect-ratio: 4/3; /* mantiene proporción sin deformar */
+    aspect-ratio: 4 / 3; /* mantiene proporción sin deformar */
   }
 
   .art-image .overlay {
     font-size: 14px;
   }
+}
+
 
 
