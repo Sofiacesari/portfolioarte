@@ -1,5 +1,5 @@
 body.art-direction {
-  background-color: #2A0913;
+  background-color: #670627;
   font-family: 'League Spartan', sans-serif; /* Toda la página usa esta fuente */
   color: #E6D1D0;
   margin: 0;
@@ -9,12 +9,12 @@ body.art-direction {
 /* Títulos de los proyectos y overlays */
 .art-item p {
   font-family: 'League Spartan', sans-serif;
-  font-weight: 400; /* texto normal */
+  font-weight: 400;
   letter-spacing: 1px;
 }
 
 .art-item strong {
-  font-weight: 700; /* solo la marca en negrita */
+  font-weight: 700;
 }
 
 /* HEADER igual que en la home */
@@ -46,15 +46,15 @@ header nav a {
 }
 
 header {
-  position: relative; /* necesario para que la l�nea se posicione respecto al header */
+  position: relative;
   padding: 24px 40px 10px;
 }
 
 header .line {
   position: absolute;
-  bottom: 0;       /* al final del header */
-  left: 0;         /* desde el borde izquierdo de la pantalla */
-  width: 100vw;    /* ocupa todo el ancho de la ventana */
+  bottom: 0;
+  left: 0;
+  width: 100vw;
   height: 1px;
   background-color: #E6D1D0;
 }
