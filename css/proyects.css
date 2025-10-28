@@ -69,6 +69,27 @@ header nav a.active {
   letter-spacing: 1px;
 }
 
+/* --- MOBILE HEADER --- */
+@media (max-width: 768px) {
+  .project-header {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 60px;
+    padding: 0 20px;
+  }
+
+  .project-header h1 {
+    font-size: 34px;
+    line-height: 1.4;
+    margin-bottom: 16px;
+  }
+
+  .project-header p {
+    font-size: 16px;
+    margin-top: 8px;
+    color: #E6D1D0;
+  }
+}
 /* GRID DE VIDEOS - PROYECTOS CON UN SOLO VIDEO*/
 
 body.project-page .video-container iframe {
@@ -79,6 +100,25 @@ body.project-page .video-container iframe {
   margin: 0 auto;
   margin-top: 10px;
   max-width: 1000px;
+}
+
+/* --- MOBILE VIDEO --- */
+@media (max-width: 768px) {
+  body.project-page .video-container {
+    margin-top: 60px;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+  }
+
+  body.project-page .video-container iframe {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  body.project-page {
+    padding-bottom: 100px;
+  }
 }
 
 /* GRID DE IMÁGENES — Masonry layout para proyectos con varias imágenes */
@@ -141,6 +181,42 @@ body.skip .video-grid-vertical .video iframe {
   height: 500px;
 }
 
+@media (max-width: 900px) {
+  body.skip .project-header h1 {
+    font-size: 22px;
+    line-height: 1.2;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+
+  body.skip .project-header h1 strong {
+    font-size: 30px;
+  }
+}
+  body.skip .video-grid-vertical {
+    grid-template-columns: 1fr; /* una sola columna */
+    gap: 20px; /* más aire entre videos */
+    justify-items: center;
+    margin: 20px auto;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  body.skip .video-grid-vertical .video {
+    width: 100%;
+    max-width: 360px; /* ancho máximo cómodo para vertical */
+    height: 640px; /* alto más grande tipo pantalla de teléfono */
+  }
+
+  body.skip .video-grid-vertical .video iframe {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* centra el video horizontalmente */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
 /*NESPRESSO LISBOA  → video y grilla de imágenes  */
 body.project-page.nespresso .grid-top {
@@ -182,7 +258,55 @@ body.project-page.nespresso .grid-bottom img {
   object-fit: cover;
   display: block;
 }
+@media (max-width: 768px) {
+  /* Grilla superior: video primero, imagen después */
+  body.project-page.nespresso .grid-top {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px; /* deja solo 10px entre el video y la imagen */
+    padding: 0;
+    margin: 0;
+  }
 
+  /* Video */
+  body.project-page.nespresso .video-container {
+    margin: 0;
+    padding: 0;
+  }
+
+  body.project-page.nespresso .video-container iframe {
+    width: 100%;
+    margin: 0;
+    display: block;
+  }
+
+  /* Imagen */
+  body.project-page.nespresso .image-left {
+    margin: 0;
+    padding: 0;
+  }
+
+  body.project-page.nespresso .image-left img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Grilla inferior: imágenes una debajo de la otra */
+  body.project-page.nespresso .grid-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    margin: 10px 0;
+  }
+
+  body.project-page.nespresso .grid-bottom img {
+    width: 100%;
+    height: auto;
+  }
+}
 /* === NESPRESSO COFFEE AMBASSADORS === */
 body.coffee-ambassadors .video-container {
   display: grid;                 /* layout en dos columnas */
@@ -257,7 +381,25 @@ body.master-origins .image-grid img {
   display: block;
   object-fit: cover;
 }
+@media (max-width: 768px) {
+  
+  body.master-origins .video-container {
+    margin-bottom: 10px;
+  }
 
+  body.master-origins .image-grid {
+    column-count: 1; /* solo una columna */
+    column-gap: 0;
+    gap: 10px;
+    padding: 0;
+    margin: 10px 0;
+  }
+
+  body.master-origins .image-grid img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
 /* SLICE BABY GOLF → 2 columnas */
 body.slice-baby-golf .video-grid {
   display: grid;
@@ -275,6 +417,19 @@ body.slice-baby-golf .video-grid iframe {
   border: none;
   display: block;
 }
+@media (max-width: 768px) {
+  body.slice-baby-golf .video-grid {
+    grid-template-columns: 1fr; /* una sola columna */
+    gap: 10px;
+    padding: 0;
+    margin: 10px 0;
+  }
+
+  body.slice-baby-golf .video-grid iframe {
+    width: 100%;
+    display: block;
+  }
+}
 
 /* MINGO → 2 columnas de imágenes */
 body.mingo .image-grid {
@@ -287,13 +442,17 @@ body.mingo .image-grid .image img {
 	height: auto;
 	display: block;
 }
+@media (max-width: 768px) {
+  body.mingo .image-grid {
+    grid-template-columns: 1fr; /* una sola columna */
+    gap: 10px; /* espacio entre imágenes */
+  }
 
-@media (max-width: 900px) {
-	.epa .image-grid {
-		grid-template-columns: 1fr;
-	}
+  body.mingo .image-grid .image img {
+    width: 100%;
+    height: auto;
+  }
 }
-
 /* MILKA HELADOS → grid de imagenes */
 .milka-helados .image-grid {
 	display: grid;
@@ -351,17 +510,5 @@ body.mingo .image-grid .image img {
   }
 }
 
-/* Ajustes responsivos */
-@media (max-width: 900px) {
-  body.skip .video-grid,
-  body.heridas .video-grid,
-  body.barista .video-grid {
-    grid-template-columns: 1fr; /* En pantallas chicas, una sola columna */
-  }
-
-  .project-header h1 {
-    font-size: 36px;
-  }
-}
 
 
