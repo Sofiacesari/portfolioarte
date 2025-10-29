@@ -153,6 +153,69 @@ body.project-page .image-grid img {
 
 /* === ART DIRECTION === */
 
+/* TULIPÁN */
+/* TULIPÁN – PARA VERLE LA CARA A DIOS */
+body.tulipan .tulipan-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  justify-content: center;
+  max-width: calc(100% - 20px);
+  margin: 20px auto 0;
+  padding: 0 10px; /* mantiene un respiro lateral */
+}
+
+/* Cada video */
+body.tulipan .tulipan-grid-3 .video {
+  width: 100%;
+  max-width: 290px;
+  height: 520px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* iframes dentro del contenedor */
+body.tulipan .tulipan-grid-3 .video iframe {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); /* centra sin recortar */
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  object-fit: cover;
+}
+
+/* --- MOBILE --- */
+@media (max-width: 768px) {
+  body.tulipan .tulipan-grid-3 {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-items: center;
+    margin: 20px auto;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  body.tulipan .tulipan-grid-3 .video {
+    width: 100%;
+    max-width: 360px;
+    height: 640px;
+  }
+
+  body.tulipan .tulipan-grid-3 .video iframe {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+
 /* SKIP */
 
 body.skip .video-grid-vertical {
