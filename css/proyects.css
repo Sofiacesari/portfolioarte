@@ -153,8 +153,70 @@ body.project-page .image-grid img {
 
 /* === ART DIRECTION === */
 
+/* AIRBORN */
+body.airborn .airborn-videos {
+  display: flex;
+  gap: 6px; 
+  justify-content: center;
+  padding: 0 5px; 
+  margin: 30px auto 10px;
+  flex-wrap: wrap;
+}
+
+body.airborn .airborn-videos .video {
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 9 / 16;
+  position: relative;
+  overflow: hidden;
+}
+
+body.airborn .airborn-videos .video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  object-fit: cover;
+}
+
+body.airborn .airborn-grid {
+  column-count: 3;
+  column-gap: 10px;
+  padding: 10px 10px;
+  margin-top: 10px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+body.airborn .airborn-grid img {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  body.airborn .airborn-videos {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  body.airborn .airborn-videos .video {
+    max-width: 100%;
+    height: 500px;
+  }
+
+  body.airborn .airborn-grid {
+    column-count: 1;
+    padding: 0;
+  }
+}
+
 /* TULIPÁN */
-/* TULIPÁN – PARA VERLE LA CARA A DIOS */
 body.tulipan .tulipan-grid-3 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -162,7 +224,7 @@ body.tulipan .tulipan-grid-3 {
   justify-content: center;
   max-width: calc(100% - 20px);
   margin: 20px auto 0;
-  padding: 0 10px; /* mantiene un respiro lateral */
+  padding: 0 10px;
 }
 
 /* Cada video */
