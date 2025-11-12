@@ -52,7 +52,7 @@ header .line {
 /* GRID STYLING */
 .styling-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 5px;
   justify-content: center;
   max-width: 1600px;

@@ -600,6 +600,37 @@ body.mingo .image-grid .image img {
 
 /* === STYLING === */
 
+/* ==== AMARA ==== */
+body.amara .amara-grid {
+  column-count: 3;
+  column-gap: 10px;
+  padding: 10px 50px;
+  margin: 40px auto 100px;
+  max-width: 1400px;
+}
+
+body.amara .amara-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+  break-inside: avoid;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  body.amara .amara-grid {
+    column-count: 2;
+    padding: 10px 30px;
+  }
+}
+
+@media (max-width: 600px) 
+  body.amara .amara-grid {
+    column-count: 1;
+    padding: 10px 20px;
+  }
+
 /* ==== TROPILLA DE INVIERNO ==== */
 .tropilla-grid {
   display: grid;
@@ -633,6 +664,3 @@ body.mingo .image-grid .image img {
     padding: 0 10px;
   }
 }
-
-
-
