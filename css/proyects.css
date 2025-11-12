@@ -618,12 +618,6 @@ body.amara .amara-grid img {
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
-  body.amara .amara-grid {
-    column-count: 2;
-    padding: 10px 30px;
-  }
-}
 
 @media (max-width: 600px) 
   body.amara .amara-grid {
