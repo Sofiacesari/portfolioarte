@@ -171,12 +171,6 @@ body.project-page .image-grid img {
   display: block;
 }
 
-@media (max-width: 768px) {
-  .project-page.cafemartinez .image-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 @media (max-width: 480px) {
   .project-page.cafemartinez .image-grid {
     grid-template-columns: 1fr;
