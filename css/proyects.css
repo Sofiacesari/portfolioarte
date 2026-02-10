@@ -405,6 +405,24 @@ body.skip .video-grid-vertical .video iframe {
     object-fit: cover;
   }
 
+/*MILKA HELADOS 2 */
+body.milka-helados2 .image-grid {
+  column-count: 3;
+  column-gap: 10px;
+  padding: 10px 10px;
+  margin-top: 10px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+body.milka-helados2 .image-grid img {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  object-fit: cover;
+  break-inside: avoid;
+}
+
 /*NESPRESSO LISBOA  → video y grilla de imágenes  */
 body.project-page.nespresso .grid-top {
   display: grid;
