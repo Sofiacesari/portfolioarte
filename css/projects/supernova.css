@@ -1,0 +1,139 @@
+
+body.project-page.adidas-supernova .process-section {
+  margin-top: 10px;
+  padding: 70px 40px;
+}
+
+body.project-page.adidas-supernova .process-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+body.project-page.adidas-supernova .process-title {
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+body.project-page.adidas-supernova .process-text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+body.project-page.adidas-supernova .process-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #E6D1D0;
+}
+
+/* primer párrafo alineado a la derecha */
+body.project-page.adidas-supernova .process-text p:first-child {
+  text-align: right;
+  margin-left: auto;
+  max-width: 90%;
+}
+
+/* MOODBOARD */
+
+body.project-page.adidas-supernova .moodboard-section {
+  margin-top: 10px;
+  padding: 0 40px 80px;
+}
+
+body.project-page.adidas-supernova .moodboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+body.project-page.adidas-supernova .moodboard-title {
+  font-size: 24px;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+body.project-page.adidas-supernova .moodboard-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* OBJECTIVE COMO IMAGEN */
+
+body.project-page.adidas-supernova .objective-image-section {
+  margin-top: 10px;
+  padding: 0 40px;
+}
+
+body.project-page.adidas-supernova .objective-image-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+body.project-page.adidas-supernova .objective-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  body.project-page.adidas-supernova .process-section {
+    padding: 60px 20px;
+  }
+
+  body.project-page.adidas-supernova .process-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  body.project-page.adidas-supernova .process-text {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  body.project-page.adidas-supernova .process-text p {
+    font-size: 16px;
+  }
+
+  body.project-page.adidas-supernova .process-text p:first-child {
+    text-align: left;
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  body.project-page.adidas-supernova .moodboard-section {
+    padding: 0 20px 60px;
+  }
+
+  body.project-page.adidas-supernova .moodboard-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  body.project-page.adidas-supernova .objective-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  body.project-page.adidas-supernova .objective-side {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  body.project-page.adidas-supernova .objective-side p {
+    font-size: 12px;
+  }
+
+  body.project-page.adidas-supernova .objective-text {
+    font-size: 16px;
+  }
+}
