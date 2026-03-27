@@ -99,6 +99,7 @@ body.project-page .video-container iframe {
   display: block;
   margin: 0 auto;
   margin-top: 10px;
+  margin-bottom: 20px;
   max-width: 1000px;
 }
 
@@ -106,7 +107,7 @@ body.project-page .video-container iframe {
 @media (max-width: 768px) {
   body.project-page .video-container {
     margin-top: 60px;
-    margin-bottom: 80px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
   }
@@ -147,6 +148,23 @@ body.project-page .image-grid img {
   body.project-page .image-grid {
     column-count: 1;
   }
+}
+
+/* === OBJECTIVE === */
+
+.objective-image-section {
+  padding: 0 40px;
+}
+
+.objective-image-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.objective-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* === VARIACIONES SEGÚN PROYECTO === */
