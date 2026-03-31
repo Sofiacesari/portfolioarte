@@ -1,0 +1,148 @@
+:root {
+    --bg-color: #2d0a11; /* Dark burgundy */
+    --text-white: #ffffff;
+    --accent-orange: #e38e31;
+    --wood-color: #c49a6c;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-white);
+    font-family: 'League Spartan', sans-serif;
+    margin: 0;
+    padding: 40px;
+    line-height: 1.4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Typography Styles */
+.cursive-title {
+    font-family: 'Amandine', cursive; /* Ensure you link the font file */
+    font-weight: normal;
+    font-size: 4.5rem;
+    margin: 0;
+    color: var(--text-white);
+}
+
+.body-text {
+    font-size: 1.1rem;
+    font-weight: 300;
+    max-width: 600px;
+}
+
+/* Top Section Layout */
+.top-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.metadata {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    text-align: right;
+    padding-top: 50px;
+}
+
+.meta-item .label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.meta-item .value {
+    display: block;
+    font-size: 1.2rem;
+}
+
+.objective-container {
+    position: relative;
+    padding-left: 40px;
+}
+
+.objective-pos {
+    margin-left: -60px;
+    margin-bottom: -10px;
+}
+
+/* Bottom Gallery Layout */
+.bottom-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.column img {
+    width: 100%;
+    display: block;
+}
+
+/* Column 1 Specifics */
+.image-wrapper {
+    position: relative;
+    display: flex;
+}
+
+.palette {
+    position: absolute;
+    right: -25px;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.swatch {
+    width: 60px;
+    height: 60px;
+}
+.swatch.white { background: #eee; }
+.swatch.wood { background: var(--wood-color); }
+.swatch.orange { background: var(--accent-orange); }
+
+/* Column 3 Specifics */
+.last-col {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.boceto-pos {
+    font-size: 3.5rem;
+    align-self: flex-start;
+    margin-bottom: -25px;
+    z-index: 1;
+}
+
+.final-pos {
+    font-size: 3.5rem;
+    align-self: flex-end;
+    margin-top: -30px;
+    z-index: 1;
+}
+
+/* Captions */
+.caption {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.caption h3 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.caption p {
+    font-size: 0.9rem;
+    font-weight: 300;
+}
