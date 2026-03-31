@@ -1,50 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto</title>
-
-<!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Questrial&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-
-  <link rel="stylesheet" href="css/contact.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Sofía Odette Cesari</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/contact.css">
 </head>
 
 <body class="contact">
   
   <header>
-    <nav>
-      <ul>
-        <li><a href="art-direction.html">ART DIRECTION</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
-        <li><a href="styling.html">STYLING</a></li>
+    <nav class="navbar">
+      <ul class="nav-main">
+        <li><a href="art-direction.html">DIRECCIÓN DE ARTE</a></li>
+        <li><a href="contact.html">CONTACTO</a></li>
+        <li><a href="styling.html">ESTILISMO</a></li>
+      </ul>
+
+      <ul class="nav-lang">
+        <li><a href="en/index.html" class="lang-link">EN</a></li>
+        <li class="separator">|</li>
+        <li><a href="index.html" class="lang-link active">ES</a></li>
       </ul>
     </nav>
-    <div class="line"></div>
   </header>
 
-  <div class="contact-container">
-    <div class="contact-left">
-      <p>Colaboramos de forma remota con proyectos alrededor del mundo. 
-        Escribinos para contarnos sobre el tuyo.</p>
-    </div>
 
-    <div class="contact-right">
-      <div>
-        <h4>Email</h4>
-        <a href="mailto:cesari.sofia@gmail.com">cesari.sofia@gmail.com</a>
-      </div>
-      <div>
-        <h4>Teléfono & WhatsApp</h4>
-        <a href="https://wa.me/5491136573168" target="_blank">+54 9 11 36573168</a>
-      </div>
-    </div>
-  </div>
-</body>
+    <main class="contact-container">
+        <section class="content">
+            <h1 class="main-title">Right here.</h1>
+            <p class="description">
+                No boundaries: supporting projects around the world.
+                Reach out and tell us what you have in mind.
+            </p>
+        </section>
+
+        <footer class="contact-footer">
+            <div class="contact-item left">
+                <span class="label">Whatsapp</span>
+                <a href="https://wa.me/5491136573168" target="_blank" class="value">+54 9 1136573168</a>
+            </div>
+            <div class="contact-item right">
+                <span class="label">Correo</span>
+                <a href="mailto:cesari.sofia@gmail.com" class="value">cesari.sofia@gmail.com</a>
+            </div>
+        </footer>
 
 </body>
 </html>

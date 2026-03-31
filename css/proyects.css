@@ -762,6 +762,75 @@ body.amara .amara-grid img {
   break-inside: avoid;
 }
 
+.main-footer {
+  background-color: #670627; 
+  padding: 15px 40px; /* Un poco más fino para que sea elegante al estar fijo */
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  box-sizing: border-box; /* Fundamental para que el padding no rompa el ancho */
+}
+
+.footer-container {
+  display: flex;
+  /* ESTO ES LA CLAVE: separa los elementos a los extremos */
+  justify-content: space-between; 
+  align-items: center;
+  width: 100%;
+  max-width: 100%; 
+}
+
+.footer-text {
+  font-family: 'League Spartan', sans-serif;
+  color: #E6D1D0; 
+  font-size: 13px; /* Un pelín más chico queda más fino */
+  margin: 0;
+  letter-spacing: 0.8px;
+  font-weight: 300; /* Sin negrita, bien liviano */
+  text-align: left;
+}
+
+.lang-switcher {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 13px;
+  font-weight: 800; 
+  display: flex;
+  gap: 12px;
+  text-align: right;
+}
+
+.lang-link {
+  text-decoration: none;
+  color: #C15562; /* Tu color para el no activo */
+  opacity: 0.7; 
+  transition: all 0.3s ease;
+}
+
+.lang-link:hover {
+  opacity: 1;
+  color: #E6D1D0;
+}
+
+.lang-link.active {
+  color: #E6D1D0; /* Tu color crema para el activo */
+  opacity: 1; 
+}
+
+.separator {
+  color: #C15562;
+  opacity: 0.4;
+  font-weight: 300;
+}
+
+/* Ajuste para celulares: que no se peguen a los bordes */
+@media (max-width: 600px) {
+  .main-footer {
+    padding: 15px 20px;
+  }
+}
+
 /* Responsive */
 
 @media (max-width: 600px) 

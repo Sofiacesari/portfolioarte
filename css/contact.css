@@ -23,28 +23,47 @@ body {
 }
 
 /* --- HEADER --- */
-header {
-  position: relative;
-  padding: 24px 40px 10px;
-  z-index: 10;
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Empuja las dos listas a los extremos */
+    align-items: center;
+    background-color: #531121;
+    border-bottom: 1px solid #E6D1D0; /* La línea horizontal larga */
+    font-family: 'League Spartan', sans-serif;
 }
 
-header nav ul {
-  list-style: none;
-  display: flex;               
-  justify-content: space-between; 
-  align-items: center;
-  margin: 0 0 10px 0;
-  padding: 0;
-  width: 100%;
+/* Estilo general para ambas listas */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
-header nav a {
-  text-decoration: none;
-  color: var(--nav-color);
-  font-size: 14px;
-  letter-spacing: 2px;
-  padding: 8px 6px;
+.nav-main li a, .nav-lang li {
+    color: #E6D1D0;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 20px;
+    display: block;
+}
+
+/* La línea vertical separadora */
+.nav-lang {
+    border-left: 1px solid #E6D1D0; /* Esta es la línea de tu captura */
+}
+
+/* Ajuste para el separador interno del EN | ES */
+.nav-lang .separator {
+    padding-left: 0;
+    padding-right: 0;
+    opacity: 0.5;
+}
+
+.nav-lang li a {
+    padding: 20px 10px; /* Menos espacio entre EN y ES */
+    text-decoration: none;
+    color: inherit;
 }
 
 header .line {
@@ -125,6 +144,8 @@ header .line {
 .value:hover {
     opacity: 0.6;
 }
+
+
 
 /* --- RESPONSIVE --- */
 @media (max-width: 900px) {
