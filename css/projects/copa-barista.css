@@ -1,3 +1,56 @@
+/* --- HEADER --- */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Empuja las dos listas a los extremos */
+    align-items: center;
+    border-bottom: 1px solid #E6D1D0; /* La línea horizontal larga */
+    font-family: 'League Spartan', sans-serif;
+}
+
+/* Estilo general para ambas listas */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-main li a, .nav-lang li {
+    color: #E6D1D0;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 20px;
+    display: block;
+}
+
+/* La línea vertical separadora */
+.nav-lang {
+    border-left: 1px solid #E6D1D0; /* Esta es la línea de tu captura */
+}
+
+/* Ajuste para el separador interno del EN | ES */
+.nav-lang .separator {
+    padding-left: 0;
+    padding-right: 0;
+    opacity: 0.5;
+}
+
+.nav-lang li a {
+    padding: 20px 10px; /* Menos espacio entre EN y ES */
+    text-decoration: none;
+    color: inherit;
+}
+
+header .line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--nav-color);
+  opacity: 0.5;
+}
+
 body.project-page.barista .process-image-container img {
   width: 100%;
   max-width: 1200px;
