@@ -171,6 +171,41 @@ body.project-page .image-grid img {
 
 /* === ART DIRECTION === */
 
+/* === KURBAN SPECIFIC (VERTICAL VIDEOS) === */
+
+.kurban .kurban-videos-vertical {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  max-width: 1000px; /* Ajusta este ancho según qué tan grandes quieras los videos */
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.kurban .kurban-videos-vertical .video {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px; /* Opcional, para suavizar las esquinas */
+}
+
+.kurban .kurban-videos-vertical .video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .kurban .kurban-videos-vertical {
+    grid-template-columns: 1fr; /* En móvil se apilan */
+    max-width: 350px; /* Ancho cómodo para un video vertical en móvil */
+  }
+
 /* CAFE MARTINEZ */
 /* === Café Martínez grid === */
 .project-page.cafemartinez .image-grid {
