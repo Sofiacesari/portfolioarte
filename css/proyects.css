@@ -782,43 +782,50 @@ body.mingo .image-grid .image img {
 
 /* === LE COQ - LOS PUMAS SEVEN === */
 
-/* Forzamos que la grilla tenga 3 columnas para que luzca bien el video */
-.pumas .image-grid {
-  column-count: 3;
-  column-gap: 10px;
-  padding: 20px 50px;
-  margin-bottom: 120px;
+.pumas .pumas-video-featured {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
 }
 
-/* Estilo para el contenedor del video dentro de la grilla */
-.pumas .video-item {
+.pumas .video-wrapper {
   width: 100%;
-  aspect-ratio: 9 / 16; /* Mantiene la forma vertical */
-  margin-bottom: 10px;
-  break-inside: avoid; /* Evita que el video se corte entre columnas */
-  border-radius: 4px;
+  max-width: 450px; /* Aquí controlas el tamaño: súbelo a 500px si lo quieres más grande */
+  aspect-ratio: 9 / 16;
+  border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Un toque de sombra para que resalte */
 }
 
-.pumas .video-item iframe {
+.pumas .video-wrapper iframe {
   width: 100%;
   height: 100%;
   border: none;
-  display: block;
+}
+
+/* Grilla de imágenes debajo */
+.pumas .image-grid {
+  column-count: 3;
+  column-gap: 10px;
+  padding: 0 50px 120px; /* Padding abajo para el footer */
 }
 
 .pumas .image-grid img {
   width: 100%;
   margin-bottom: 10px;
   display: block;
-  break-inside: avoid;
 }
 
-/* Ajuste móvil */
+/* Mobile */
 @media (max-width: 768px) {
+  .pumas .video-wrapper {
+    max-width: 100%; /* En móviles ocupa casi todo el ancho */
+    padding: 0 10px;
+  }
+  
   .pumas .image-grid {
-    column-count: 1; /* En celular, todo en una sola columna */
-    padding: 10px 20px;
+    column-count: 1;
+    padding: 0 20px 100px;
   }
 }
 
