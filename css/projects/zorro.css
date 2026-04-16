@@ -1,0 +1,52 @@
+/* === CORRECCIÓN HEADER DOBLE LISTA === */
+
+header nav {
+  display: flex;
+  justify-content: space-between; /* Empuja el menú a la izquierda y el idioma a la derecha */
+  align-items: center;
+  width: 100%;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+/* Espaciado para el menú principal */
+.nav-main {
+  gap: 30px; /* Espacio entre ART DIRECTION, CONTACT, etc. */
+}
+
+/* Estilos para el selector de idiomas */
+.nav-lang {
+  gap: 10px;
+  font-weight: bold;
+}
+
+.nav-lang .separator {
+  color: #E6D1D0;
+  opacity: 0.5;
+}
+
+/* Ajuste de la línea para que no tape nada */
+header .line {
+  position: absolute;
+  top: 55px; /* Ajusta esto según el alto de tu nav */
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #E6D1D0;
+}
+
+/* Fix para mobile */
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column; /* Se apilan en celular */
+    gap: 15px;
+  }
+  header .line {
+    top: 90px; /* Bajamos la línea en mobile para que no corte el texto */
+  }
+}
