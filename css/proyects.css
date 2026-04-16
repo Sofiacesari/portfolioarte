@@ -782,32 +782,30 @@ body.mingo .image-grid .image img {
 
 /* === LE COQ - LOS PUMAS SEVEN === */
 
-.pumas .pumas-video-featured {
-  display: flex;
-  justify-content: center;
-  padding: 40px 20px;
+.pumas .pumas-video {
+  width: 100%;
+  display: block;
+  align-items: center;
 }
 
 .pumas .video-wrapper {
   width: 100%;
-  max-width: 450px; /* Aquí controlas el tamaño: súbelo a 500px si lo quieres más grande */
-  aspect-ratio: 9 / 16;
-  border-radius: 12px;
+  margin: 0 auto;      
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Un toque de sombra para que resalte */
 }
 
 .pumas .video-wrapper iframe {
   width: 100%;
   height: 100%;
   border: none;
+  display: block;
 }
 
-/* Grilla de imágenes debajo */
 .pumas .image-grid {
-  column-count: 3;
+  column-count: 2;
   column-gap: 10px;
-  padding: 0 50px 120px; /* Padding abajo para el footer */
+  padding: 0 50px 50px;
 }
 
 .pumas .image-grid img {
@@ -819,140 +817,14 @@ body.mingo .image-grid .image img {
 /* Mobile */
 @media (max-width: 768px) {
   .pumas .video-wrapper {
-    max-width: 100%; /* En móviles ocupa casi todo el ancho */
-    padding: 0 10px;
+    max-width: 90%; /* Un poco más pequeño que el ancho total del celu */
   }
   
   .pumas .image-grid {
     column-count: 1;
-    padding: 0 20px 100px;
+    padding: 0 20px 50px;
   }
 }
 
-/* ==== AMARA ==== */
-body.amara .amara-grid {
-  column-count: 3;
-  column-gap: 10px;
-  padding: 10px 50px;
-  margin: 40px auto 100px;
-  max-width: 1400px;
-}
 
-body.amara .amara-grid img {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 10px;
-  break-inside: avoid;
-}
 
-.main-footer {
-  background-color: #670627; 
-  padding: 15px 40px; /* Un poco más fino para que sea elegante al estar fijo */
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 9999;
-  box-sizing: border-box; /* Fundamental para que el padding no rompa el ancho */
-}
-
-.footer-container {
-  display: flex;
-  /* ESTO ES LA CLAVE: separa los elementos a los extremos */
-  justify-content: space-between; 
-  align-items: center;
-  width: 100%;
-  max-width: 100%; 
-}
-
-.footer-text {
-  font-family: 'League Spartan', sans-serif;
-  color: #E6D1D0; 
-  font-size: 13px; /* Un pelín más chico queda más fino */
-  margin: 0;
-  letter-spacing: 0.8px;
-  font-weight: 300; /* Sin negrita, bien liviano */
-  text-align: left;
-}
-
-.lang-switcher {
-  font-family: 'League Spartan', sans-serif;
-  font-size: 13px;
-  font-weight: 800; 
-  display: flex;
-  gap: 12px;
-  text-align: right;
-}
-
-.lang-link {
-  text-decoration: none;
-  color: #C15562; /* Tu color para el no activo */
-  opacity: 0.7; 
-  transition: all 0.3s ease;
-}
-
-.lang-link:hover {
-  opacity: 1;
-  color: #E6D1D0;
-}
-
-.lang-link.active {
-  color: #E6D1D0; /* Tu color crema para el activo */
-  opacity: 1; 
-}
-
-.separator {
-  color: #C15562;
-  opacity: 0.4;
-  font-weight: 300;
-}
-
-/* Ajuste para celulares: que no se peguen a los bordes */
-@media (max-width: 600px) {
-  .main-footer {
-    padding: 15px 20px;
-  }
-}
-
-/* Responsive */
-
-@media (max-width: 600px) 
-  body.amara .amara-grid {
-    column-count: 1;
-    padding: 10px 20px;
-  }
-
-/* ==== TROPILLA DE INVIERNO ==== */
-.tropilla-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  width: 100%;
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 0 20px;
-  box-sizing: border-box;
-}
-
-.tropilla-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  body.tropilla .tropilla-grid {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 0 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  body.tropilla .tropilla-grid {
-    grid-template-columns: 1fr;
-    padding: 0 10px;
-  }
-}
