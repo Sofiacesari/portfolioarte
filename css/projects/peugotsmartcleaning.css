@@ -1,0 +1,38 @@
+/* === VIDEOS UNIFORMES === */
+body.peugeot .peugeot-video-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px; 
+    padding: 10px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+body.peugeot .video-item {
+    width: 100%; /* Agregado ; */
+    max-width: 1000px; /* Agregado ; */
+    aspect-ratio: 16 / 9;
+    background: #000; /* Tip: fondo negro mientras carga */
+}
+
+body.peugeot .video-item iframe {
+    width: 100%; /* Agregado ; */
+    height: 100%; /* Agregado ; */
+    border: none;
+    display: block; /* Evita espacios extra debajo del video */
+}
+
+/* === MOBILE === */
+@media (max-width: 768px) {
+    body.peugeot .nav-container {
+        flex-direction: column; /* Agregado ; */
+        gap: 15px;
+    }
+    
+    body.peugeot .peugeot-video-list {
+        gap: 30px;
+        padding: 40px 15px;
+    }
+}
+}
