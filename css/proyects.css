@@ -210,97 +210,131 @@ body.project-page .image-grid img {
    CAFÉ MARTÍNEZ
 =========================== */
 
-.project-page.cafemartinez main{
-    max-width:1200px;
-    margin:0 auto 80px;
+ /* ===========================
+   CAFÉ MARTÍNEZ
+=========================== */
+
+.project-page.cafemartinez .content-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(6,1fr);
+
+    gap:18px;
+
+    max-width:1100px;
+
+    margin:50px auto 80px;
+
     padding:0 20px;
+
 }
 
-/* HERO */
+/* ---------- Videos ---------- */
 
-.project-page.cafemartinez .hero-videos{
+.project-page.cafemartinez .video{
+
+    grid-column:span 6;
+
+}
+
+.project-page.cafemartinez .video iframe{
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    border:0;
+
+    display:block;
+
+}
+
+/* ---------- Fotos ---------- */
+
+.project-page.cafemartinez .photo{
+
+    grid-column:span 3;
+
+}
+
+.project-page.cafemartinez .photo{
+
+    grid-column:span 3;
     display:flex;
-    flex-direction:column;
-    gap:30px;
-    max-width:950px;
-    margin:50px auto 60px;
+    align-items:center;
+
 }
 
-.project-page.cafemartinez .hero-videos iframe{
+.project-page.cafemartinez .photo img{
+
     width:100%;
-    aspect-ratio:16/9;
-    border:none;
+    height:auto;
     display:block;
+    object-fit:contain;
+
 }
 
-/* GALERÍA */
+/* ---------- Foto grande ---------- */
 
-.project-page.cafemartinez .gallery{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:15px;
-    margin:60px auto;
+.project-page.cafemartinez .wide-photo{
+
+    grid-column:span 6;
+
 }
 
-.project-page.cafemartinez .gallery img{
+.project-page.cafemartinez .wide-photo img{
+
     width:100%;
-    aspect-ratio:4/5;
-    object-fit:cover;
+    height:auto;
     display:block;
+
 }
 
-/* VIDEO SIMPLE */
+/* ---------- Shorts ---------- */
 
-.project-page.cafemartinez .single-video{
-    max-width:950px;
-    margin:60px auto;
-}
+.project-page.cafemartinez .short{
 
-.project-page.cafemartinez .single-video iframe{
-    width:100%;
-    aspect-ratio:16/9;
-    border:none;
-    display:block;
-}
+    grid-column:span 3;
 
-/* SHORTS */
-
-.project-page.cafemartinez .shorts-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:20px;
-    max-width:650px;
-    margin:60px auto;
 }
 
 .project-page.cafemartinez .short iframe{
+
     width:100%;
+
     aspect-ratio:9/16;
-    border:none;
-    display:block;
+
+    border:0;
+
 }
 
-/* MOBILE */
+/* ---------- MOBILE ---------- */
 
-@media (max-width:768px){
+@media(max-width:768px){
 
-    .project-page.cafemartinez .hero-videos,
-    .project-page.cafemartinez .single-video{
-        max-width:100%;
-        margin:40px auto;
-    }
+.project-page.cafemartinez .content-grid{
 
-    .project-page.cafemartinez .gallery{
-        grid-template-columns:1fr;
-        gap:10px;
-        margin:40px 0;
-    }
+grid-template-columns:1fr;
 
-    .project-page.cafemartinez .shorts-grid{
-        grid-template-columns:1fr;
-        max-width:360px;
-        gap:20px;
-    }
+gap:14px;
+
+}
+
+.project-page.cafemartinez .photo,
+.project-page.cafemartinez .short,
+.project-page.cafemartinez .video,
+.project-page.cafemartinez .wide-photo{
+
+grid-column:auto;
+
+}
+
+.project-page.cafemartinez .wide-photo img{
+
+aspect-ratio:auto;
+
+}
 
 }
 
